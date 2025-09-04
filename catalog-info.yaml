@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "gh-webinar-demo-01"
+  annotations:
+    github.com/project-slug: vrabbi-backstage/gh-webinar-demo-01
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
