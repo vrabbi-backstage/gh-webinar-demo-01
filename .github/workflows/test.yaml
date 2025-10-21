@@ -7,5 +7,7 @@ jobs:
     # You need to use the INSTALLATION_NAME from the previous step
     runs-on: arc-runner-set
     steps:
-    - run: ip addr show
+    - run: |
+        IP_ADDR=`hostname -i`
+        echo "The Pod IP running this action is ${IP_ADDR}"
     - run: echo "🎉 This job uses runner scale set runners!"
