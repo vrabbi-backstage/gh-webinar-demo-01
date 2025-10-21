@@ -8,6 +8,7 @@ jobs:
     runs-on: arc-runner-set
     steps:
     - run: |
-        IP_ADDR=`hostname -i`
-        echo "The Pod IP running this action is ${IP_ADDR}"
+        POD_IP=`hostname -i`
+        echo "The Pod IP running this action is ${POD_IP}"
+        echo "The Node IP running this action is ${NODE_IP}
     - run: echo "🎉 This job uses runner scale set runners!"
