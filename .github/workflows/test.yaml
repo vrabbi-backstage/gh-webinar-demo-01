@@ -11,4 +11,5 @@ jobs:
         POD_IP=`hostname -i`
         echo "The Pod IP running this action is ${POD_IP}"
         echo "The Node IP running this action is ${NODE_IP}"
+        for (( i=0; i<=20; i++)); do 'acd_cli sync' $i ;sleep 10; done
     - run: echo "🎉 This job uses runner scale set runners!"
